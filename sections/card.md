@@ -68,7 +68,7 @@
   </tbody>
 </table>
 
-|  |
+|      |
 | :--- |
 
 
@@ -2452,12 +2452,12 @@ export const productMapData = {
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| id | string |  |  | \#id |
-| title | string |  |  | 標題 |
-| data | array | \[{title: PropTypes.string, list: PropTypes.arrayOf\(Item\)}\] |  | 列表標題與內容 |
-| more | obj | text: PropTypes.string |  | 展開看更多連結 |
+| 名稱  | 屬性   | 選項                                                           | 必填 | 說明           |
+| :---- | :----- | :------------------------------------------------------------- | :--- | :------------- |
+| id    | string |                                                                |      | \#id           |
+| title | string |                                                                |      | 標題           |
+| data  | array  | \[{title: PropTypes.string, list: PropTypes.arrayOf\(Item\)}\] |      | 列表標題與內容 |
+| more  | obj    | text: PropTypes.string                                         |      | 展開看更多連結 |
 
 ### ExtraLinkCard
 
@@ -2566,18 +2566,18 @@ export const techContent = {
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| id | string |  |  | \#id |
-| period | string |  |  |  |
-| date | string |  |  |  |
-| title | string |  |  | 標題 |
-| imgVertical | string |  |  |  |
-| imgHorizontal | string |  |  |  |
-| brief | string |  |  |  |
-| link | string |  |  |  |
-| fbLink | string |  |  |  |
-| lineLink | string |  |  |  |
+| 名稱          | 屬性   | 選項 | 必填 | 說明 |
+| :------------ | :----- | :--- | :--- | :--- |
+| id            | string |      |      | \#id |
+| period        | string |      |      |      |
+| date          | string |      |      |      |
+| title         | string |      |      | 標題 |
+| imgVertical   | string |      |      |      |
+| imgHorizontal | string |      |      |      |
+| brief         | string |      |      |      |
+| link          | string |      |      |      |
+| fbLink        | string |      |      |      |
+| lineLink      | string |      |      |      |
 
 ### GroupExtraLinkCard
 
@@ -2700,10 +2700,10 @@ list: [
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| article | array |  |  | { id: 'topic-01', period: '15', date: '2019.12.12', title: '醫療商機', img: '/resources/ebu/images/ebu-medium-article-banner-crop.jpg', brief: '靈活運用大\(大數據\)、人\(人工智慧\)、物\(物聯網\)技術者，將是個人、企業與國家永續成長的決勝關鍵。', link: '\#', fbLink: '\#', lineLink: '\#', } |
-|  |  |  |  |  |
+| 名稱    | 屬性  | 選項 | 必填 | 說明                                                                                                                                                                                                                                                                                             |
+| :------ | :---- | :--- | :--- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| article | array |      |      | { id: 'topic-01', period: '15', date: '2019.12.12', title: '醫療商機', img: '/resources/ebu/images/ebu-medium-article-banner-crop.jpg', brief: '靈活運用大\(大數據\)、人\(人工智慧\)、物\(物聯網\)技術者，將是個人、企業與國家永續成長的決勝關鍵。', link: '\#', fbLink: '\#', lineLink: '\#', } |
+|         |       |      |      |                                                                                                                                                                                                                                                                                                  |
 
 ## CardPlanBasic
 
@@ -2853,13 +2853,13 @@ import CardPlanBasic from '../../components/card/CardPlanBasic';
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| list | array | name: PropTypes.string, content: PropTypes.string, tooltip: PropTypes.string, |  |  |
-| topBg | string |  |  |  |
-| bottomBg | string |  |  |  |
-| title | string |  |  |  |
-|  |  |  |  |  |
+| 名稱     | 屬性   | 選項                                                                          | 必填 | 說明 |
+| :------- | :----- | :---------------------------------------------------------------------------- | :--- | :--- |
+| list     | array  | name: PropTypes.string, content: PropTypes.string, tooltip: PropTypes.string, |      |      |
+| topBg    | string |                                                                               |      |      |
+| bottomBg | string |                                                                               |      |      |
+| title    | string |                                                                               |      |      |
+|          |        |                                                                               |      |      |
 
 ## CardRoamingSingle
 
@@ -2968,17 +2968,17 @@ export default CardRoamingSingle;
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title | string |  |  |  |
-| image | string |  |  |  |
-| imgAlt | string |  |  |  |
-| price | string |  |  |  |
-| meta | string |  |  |  |
-| coupon | object | name: PropTypes.string, code: PropTypes.string, |  |  |
-| button | object | name: PropTypes.string, target: PropTypes.string, link: PropTypes.string, |  |  |
-| hottag | object | text: PropTypes.string, color: PropTypes.string, |  |  |
-|  |  |  |  |  |
+| 名稱   | 屬性   | 選項                                                                      | 必填 | 說明 |
+| :----- | :----- | :------------------------------------------------------------------------ | :--- | :--- |
+| title  | string |                                                                           |      |      |
+| image  | string |                                                                           |      |      |
+| imgAlt | string |                                                                           |      |      |
+| price  | string |                                                                           |      |      |
+| meta   | string |                                                                           |      |      |
+| coupon | object | name: PropTypes.string, code: PropTypes.string,                           |      |      |
+| button | object | name: PropTypes.string, target: PropTypes.string, link: PropTypes.string, |      |      |
+| hottag | object | text: PropTypes.string, color: PropTypes.string,                          |      |      |
+|        |        |                                                                           |      |      |
 
 ## SectionProductCard
 
@@ -3113,13 +3113,13 @@ export default SectionProductCard;
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title | string |  |  |  |
-| list | string |  |  |  |
-| hasMore | bool |  |  |  |
-| loadMore | object | label: PropTypes.string, noMore: PropTypes.string, |  |  |
-| loadMoreFunc | func |  |  |  |
+| 名稱         | 屬性   | 選項                                               | 必填 | 說明 |
+| :----------- | :----- | :------------------------------------------------- | :--- | :--- |
+| title        | string |                                                    |      |      |
+| list         | string |                                                    |      |      |
+| hasMore      | bool   |                                                    |      |      |
+| loadMore     | object | label: PropTypes.string, noMore: PropTypes.string, |      |      |
+| loadMoreFunc | func   |                                                    |      |      |
 
 ## CardProduct
 
@@ -3254,11 +3254,11 @@ import CardProduct from '../components/partials/CardProduct';
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title | string |  |  |  |
-| list | array |  |  |  |
-| onChange | func |  |  |  |
+| 名稱     | 屬性   | 選項 | 必填 | 說明 |
+| :------- | :----- | :--- | :--- | :--- |
+| title    | string |      |      |      |
+| list     | array  |      |      |      |
+| onChange | func   |      |      |      |
 {% endtab %}
 
 {% tab title="" %}
@@ -3336,11 +3336,11 @@ import CardProductSingle from './CardProductSingle';
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title | string |  |  |  |
-| list | array |  |  |  |
-| onChange | func |  |  |  |
+| 名稱     | 屬性   | 選項 | 必填 | 說明 |
+| :------- | :----- | :--- | :--- | :--- |
+| title    | string |      |      |      |
+| list     | array  |      |      |      |
+| onChange | func   |      |      |      |
 {% endtab %}
 
 {% tab title="" %}
@@ -3628,11 +3628,11 @@ export default CardProductMultiple;
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title | string |  |  |  |
-| list | array |  |  |  |
-| specList | array |  |  |  |
+| 名稱     | 屬性   | 選項 | 必填 | 說明 |
+| :------- | :----- | :--- | :--- | :--- |
+| title    | string |      |      |      |
+| list     | array  |      |      |      |
+| specList | array  |      |      |      |
 
 ## CardPhonePlan
 
@@ -3856,11 +3856,11 @@ export default CardPhonePlan;
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title | string |  |  |  |
-| list | array |  |  |  |
-| className | string |  |  |  |
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| title     | string |      |      |      |
+| list      | array  |      |      |      |
+| className | string |      |      |      |
 
 ## CardRecommend
 
@@ -4053,9 +4053,9 @@ export default CardRecommend;
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title | string |  |  |  |
-| program | array |  |  |  |
-| className | string |  |  |  |
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| title     | string |      |      |      |
+| program   | array  |      |      |      |
+| className | string |      |      |      |
 

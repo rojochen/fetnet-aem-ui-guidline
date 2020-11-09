@@ -1,5 +1,28 @@
 # Checkbox
 
+## Checkbox
+
+```
+import Checkbox from '../../components/form/Checkbox';
+<Checkbox
+  name='billAlert'
+  className='checkbox mt-0 m-md-0 pb-1'
+  label="帳單金額與繳費通知結果"
+  default={defaultForm[i].billAlert.value}
+  onChange={(n, v) => this.defaultFormOnChange(n, v, i)}
+/>
+```
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| className | string |      | true |      |
+| checked   | bool   |      |      |      |
+| name      | string |      |      |      |
+| label     | string |      |      |      |
+| value     | string |      |      |      |
+| onChange  | func   |      |      |      |
+
 ## CheckboxButtons
 
 ![](../.gitbook/assets/jie-tu-20200303-xia-wu-2.46.40.png)
@@ -563,6 +586,8 @@ class CheckboxCollapse extends React.Component {
 
 CheckboxCollapse.propTypes = {
   name: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  required: PropTypes.bool,
   label: PropTypes.string.isRequired,
   collapseContent: PropTypes.string.isRequired,
   checked: PropTypes.bool,
@@ -577,13 +602,318 @@ export default withFormsy(CheckboxCollapse)
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| name | String | true |  | 輸入框名稱 |
-| label | String |  |  | 標題 |
-| collapseContent | Node |  |  | HTML 內容 |
-| checked | Boolean |  |  | 是否選取 |
-| validationError | String or Object |  |  | 錯誤訊息 |
-| required | Boolean |  |  | 是否為必填 |
-| getCheckbox | Function |  |  | 回傳選取狀態 |
+| 名稱            | 屬性             | 必填 | 選項 | 說明         |
+| :-------------- | :--------------- | :--- | :--- | :----------- |
+| name            | String           | true |      | 輸入框名稱   |
+| clssName        | String           |      |      |              |
+| label           | String           |      |      | 標題         |
+| required        | bool             |      |      |              |
+| collapseContent | Node             |      |      | HTML 內容    |
+| checked         | Boolean          |      |      | 是否選取     |
+| validationError | String or Object |      |      | 錯誤訊息     |
+| required        | Boolean          |      |      | 是否為必填   |
+| getCheckbox     | Function         |      |      | 回傳選取狀態 |
 
+## LabelInput
+
+```
+import LabelInput from '../form/LabelInput';
+<LabelInput
+  name='phone'
+  validations={{ matchRegexp: /^09\d{2}-?\d{3}-?\d{3}$/ }}
+  required
+  label=''
+  placeholder='輸入手機門號'
+  value={this.state.form.phone.value}
+  validationErrors={{
+    matchRegexp: '請輸入正確的手機門號',
+  }}
+  onChange={this.changeValue}
+/>
+```
+
+#### Properties
+
+| 名稱        | 屬性   | 選項 | 必填 | 說明 |
+| :---------- | :----- | :--- | :--- | :--- |
+| className   | string |      |      |      |
+| required    | bool   |      | true |      |
+| label       | string |      |      |      |
+| placeholder | string |      |      |      |
+| value       | string |      |      |      |
+| maxLength   | number |      |      |      |
+
+## LabelPassword
+
+```
+import LabelPassword from '../components/form/LabelPassword';
+<LabelPassword
+  name="old_pwd"
+  label="原始密碼"
+  validationErrors={{
+    isDefaultRequiredValue: '請輸入原始密碼'
+  }}
+  maxLength='14'
+  required={true}
+  placeholder="需包含英文及數字共6~14碼"
+  value={form.old_pwd.value}
+  onChange={this.onChange}
+/>
+```
+
+#### Properties
+
+| 名稱        | 屬性   | 選項 | 必填 | 說明 |
+| :---------- | :----- | :--- | :--- | :--- |
+| required    | bool   |      | true |      |
+| label       | string |      | true |      |
+| placeholder | string |      |      |      |
+| value       | string |      |      |      |
+| maxLength   | number |      |      |      |
+
+##  LabelTextarea
+
+```
+import LabelTextarea from '../form/LabelTextarea'
+<LabelTextarea
+  placeholder='若您對此解答有其他意見，請說明。幫助我們提供更佳服務，謝謝！'
+  label=''
+  name='comment'
+  value={this.state.feedbackForm.comment}
+  onChange={this.storeForm} />
+```
+
+#### Properties
+
+| 名稱        | 屬性   | 選項 | 必填 | 說明 |
+| :---------- | :----- | :--- | :--- | :--- |
+| required    | bool   |      | true |      |
+| name        | string |      |      |      |
+| placeholder | string |      |      |      |
+| className   | string |      |      |      |
+| value       | string |      |      |      |
+| maxLength   | number |      |      |      |
+| onChange    | func   |      |      |      |
+
+
+## ParkingCheckAreaSection
+
+```
+import ParkingCheckAreaSection from '../../components/form/ParkingCheckAreaSection';
+<ParkingCheckAreaSection 
+  key={`ParkingCheckAreaSection-${i}`}
+  className={this.state.showArea && selectedArea.index === i ? 'd-block' : 'd-none'} 
+  name='area'
+  options={
+    form.new[i].value === true ? newAreaList : areaList
+  }
+  selected={selectedArea}
+  onChange={(n, v) => this.onChange('area', v, i)} 
+  close={this.closeArea}
+  reset={this.resetArea}
+/>
+```
+
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| name      | string |      |      |      |
+| className | string |      |      |      |
+| selected  | obj    |      |      |      |
+| options   | array  |      |      |      |
+| onChange  | func   |      |      |      |
+| reset     | func   |      |      |      |
+| close     | func   |      |      |      |
+
+
+## RadioButtons
+
+```
+import RadioButtons from '../../components/form/RadioButtons';
+<RadioButtons
+    name='feedbackOption'
+    options={[
+        { value: '1', label: '這說明沒有解決我的問題' },
+        { value: '2', label: '這些資訊不正確' },
+        { value: '3', label: '我看不懂' },
+        { value: '4', label: '其它' },
+    ]}
+    selected={this.state.feedbackForm.feedbackOption}
+    getSelected={e => this.storeForm('feedbackOption', e)}
+/>
+```
+
+#### Properties
+
+| 名稱        | 屬性   | 選項 | 必填 | 說明                                             |
+| :---------- | :----- | :--- | :--- | :----------------------------------------------- |
+| label       | string |      |      |                                                  |
+| className   | string |      |      |                                                  |
+| name        | string |      | true |                                                  |
+| options     | array  |      | true | label: PropTypes.string,value: PropTypes.string, |
+| selected    | string |      |      |                                                  |
+| getSelected | func   |      |      |                                                  |
+
+## RadioButtonsWithPrice
+```
+import RadioButtonsWithPrice from '../../components/form/RadioButtonsWithPrice';
+<RadioButtonsWithPrice
+  name='options1'
+  options={this.props.option1}
+  selected="1"
+  getSelected={v => this.onChange('options1', v)}
+/>
+```
+
+#### Properties
+
+| 名稱        | 屬性   | 選項 | 必填 | 說明                                             |
+| :---------- | :----- | :--- | :--- | :----------------------------------------------- |
+| label       | string |      |      |                                                  |
+| className   | string |      |      |                                                  |
+| name        | string |      | true |                                                  |
+| options     | array  |      | true | label: PropTypes.string,value: PropTypes.string, |
+| selected    | string |      |      |                                                  |
+| getSelected | func   |      |      |                                                  |
+
+## RadioGroup
+
+```
+import RadioGroup from '../../components/form/RadioGroup';
+<RadioGroup
+  validationErrors='是否為郵政信箱'
+  onChange={this.onChange}
+  label='是否為郵政信箱'
+  name='isMail'
+  className="is-two mb-md-5 mb-2"
+  required={this.state.form.isMail.required}
+  default={this.state.form.isMail.value}
+  options={this.state.ismail}
+/>
+```
+
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明                                                                                                                                |
+| :-------- | :----- | :--- | :--- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| required  | bool   |      |      |                                                                                                                                     |
+| label     | string |      | true |                                                                                                                                     |
+| name      | string |      | true |                                                                                                                                     |
+| default   | string |      |      |                                                                                                                                     |
+| className | string |      |      |                                                                                                                                     |
+| options   | array  |      |      | icon: PropTypes.shape({ default: PropTypes.string, selected: PropTypes.string, }), label: PropTypes.string,value: PropTypes.string, |
+| onChange  | func   |      |      |                                                                                                                                     |
+| tooltip   | string |      |      |                                                                                                                                     |
+
+## RoamingPlanRadio
+```
+import RoamingPlanRadio from '../../components/form/RoamingPlanRadio';
+<RoamingPlanRadio 
+  {...export const addPlan = {
+  required: true,
+  label: '',
+  name: 'plan',
+  default: '',
+  className: '',
+  options: [
+    {
+      value: '0',
+      name: '0',
+      title: '亞洲輕量包暢用型 500MB!',
+      desc: '原方案的上網流量使用完畢後，將立即啟用此加購流量！',
+      target: '適用對象：遠傳電信月租型用戶', 
+      country: '適用國家：新加坡、韓國、香港、澳門、馬來西亞、泰國等 13 國',
+      tips: 'Tips Tips Tips',
+      days: '最高使用天數：10 天',
+      action: {
+        text: '看詳細說明',
+        link: '#',
+      },
+      unit: '每500MB',
+      price: '99',
+    },
+  ]
+}} 
+  name='select_plan'
+  selected={this.state.form.select_plan.value}
+  getSelected={e => this.onChange('select_plan', e)}
+  openModal={this.openModal}
+/>
+```
+
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| :-------- | :----- | :--- | :--- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type      | string |      |      |                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| required  | bool   |      |      |                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| name      | bool   |      | true |                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| default   | string |      |      |                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| className | string |      |      |                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| options   | array  |      |      | value: PropTypes.string.isRequired,name: PropTypes.string.isRequired,title: PropTypes.string,desc: PropTypes.string,target: PropTypes.string,country: PropTypes.string,flightCompany: PropTypes.shape({  name: PropTypes.string,  link: PropTypes.string,}),days: PropTypes.string,tips: PropTypes.string,action: PropTypes.shape({  text: PropTypes.string,  link: PropTypes.string,}),unit: PropTypes.string,price: PropTypes.string, |
+| onChange  | func   |      |      |                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| openModal | func   |      |      |                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+
+## Select
+```
+import Select from '../../components/form/Select';
+<Select
+  name="credit_month"
+  required={true}
+  label={"月"}
+  value={form.credit_month.value}
+  options={[
+    { text: '01', value: '01' },
+    { text: '02', value: '02' },
+    { text: '03', value: '03' },
+    { text: '04', value: '04' },
+    { text: '05', value: '05' },
+    { text: '06', value: '06' },
+    { text: '07', value: '07' },
+    { text: '08', value: '08' },
+    { text: '09', value: '09' },
+    { text: '10', value: '10' },
+    { text: '11', value: '11' },
+    { text: '12', value: '12' }
+  ]}
+  onChange={this.onChange} 
+/>
+```
+
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明                                            |
+| :-------- | :----- | :--- | :--- | :---------------------------------------------- |
+| label     | string |      |      |                                                 |
+| name      | string |      |      |                                                 |
+| className | string |      |      |                                                 |
+| disabled  | string |      |      |                                                 |
+| options   | array  |      |      | text: PropTypes.string,value: PropTypes.string, |
+| value     | string |      |      |                                                 |
+| onChange  | func   |      |      |                                                 |
+
+## TextInput
+
+```
+import TextInput from '../../components/form/TextInput';
+<TextInput
+  type='tel'
+  name='credit_code'
+  required={true}
+  maxLength="3"
+  minLength="3"
+  validationError={"請輸入檢查碼"}
+  value={form.credit_code.value}
+  onChange={val => this.onChange('credit_code', val)}
+/
+```
+
+#### Properties
+
+| 名稱        | 屬性   | 選項 | 必填 | 說明 |
+| :---------- | :----- | :--- | :--- | :--- |
+| type        | string |      |      |      |
+| value       | string |      |      |      |
+| changeValue | bool   |      |      |      |
+| onChange    | func   |      |      |      |
