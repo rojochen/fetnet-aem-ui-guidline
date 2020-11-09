@@ -81,9 +81,66 @@ import CbuPromotion from '../../ad/CbuPromotion';
 
 #### Properties
 
-| 名稱   | 屬性   | 選項 | 必填 | 說明                  |
-| :----- | :----- | :--- | :--- | :-------------------- |
-| image  | obj    |      |      | default, retina, alt |
-| title  | string |      |      |                       |
-| description | string |      |      |                       |
-| description | action |      |      |text, link, target|
+| 名稱        | 屬性   | 選項 | 必填 | 說明                 |
+| :---------- | :----- | :--- | :--- | :------------------- |
+| image       | obj    |      |      | default, retina, alt |
+| title       | string |      |      |                      |
+| description | string |      |      |                      |
+| description | action |      |      | text, link, target   |
+
+## SectionAd5
+
+```text
+import SectionAd5 from '../../components/ad/SectionAd5';
+<SectionAd5 {...{
+  image: {
+    md: '/resources/cbu/life-circle-curation/images/sidebar-ad.jpg',
+    sm: '/resources/cbu/life-circle-curation/images/cbu-promotion-sidebar-750x540.jpg'
+  },
+  title: '遠傳遠遊卡 friDay聯名卡 卡友專區',
+  content: '於friDay購物結帳頁購買遠遊卡並輸入優惠券折抵序號(ftcard)享九折優...',
+  action: {
+    link: '#',
+    text: '了解更多',
+  },
+}} />
+```
+
+#### Properties
+
+| 名稱    | 屬性   | 選項 | 必填 | 說明                                            |
+| :------ | :----- | :--- | :--- | :---------------------------------------------- |
+| image   | obj    |      |      | md: PropTypes.string, sm: PropTypes.string,     |
+| title   | string |      |      |                                                 |
+| content | string |      |      |                                                 |
+| action  | obj    |      |      | text: PropTypes.string, link: PropTypes.string, |
+
+
+## SplashPromotion
+
+```text
+import SplashPromotion from '../components/ad/SplashPromotion'
+<SplashPromotion
+  video={{
+    cover: {
+      md: '/resources/cbu/cbu-index/img-splash-promo@2x.jpg',
+      sm: '/resources/cbu/cbu-index/mobile-spash-promotion.jpg',
+    },
+    alterVideo: 'https://youtu.be/_-P84QjN_G8'
+  }}
+  title='Google Pixel 4 打造完美手機體驗'
+  description='遠傳獨家銷售，現在馬上來體驗'
+  action={{
+    link: '/',
+    text: '立即購買'
+  }}
+/>
+```
+#### Properties
+
+| 名稱   | 屬性   | 選項 | 必填 | 說明                                                                                                                               |
+| :----- | :----- | :--- | :--- | :--------------------------------------------------------------------------------------------------------------------------------- |
+| image  | obj    |      |      | md: PropTypes.string, sm: PropTypes.string,                                                                                        |
+| title  | string |      |      |                                                                                                                                    |
+| video  | obj    |      |      | alterVideo: PropTypes.string, videoUrl: PropTypes string, cover: PropTypes.shape({ md: PropTypes.string, sm: PropTypes.string, }), |
+| action | obj    |      |      | text: PropTypes.string, link: PropTypes string,                                                                                    |
