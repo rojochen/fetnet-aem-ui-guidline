@@ -2,8 +2,6 @@
 
 ## FooterAd
 
-## FooterAd
-
 An ad block always places in footer
 
 ```text
@@ -26,16 +24,16 @@ import FooterAd from '../ad/FooterAd';
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| image  | Obj |  |  |  |
-| image.md | string |  |  | 大網圖 |
-| image.sm | string |  |  | 小網圖 |
-| title | string |  |  |  |
-| action | obj |  |  |  |
-| action.text | string |  |  |  |
-| action.link | string |  |  |  |
-| action.btnStyle | string |  |  | only 'primary' or 'seconday' |
+| 名稱            | 屬性   | 選項 | 必填 | 說明                         |
+| :-------------- | :----- | :--- | :--- | :--------------------------- |
+| image           | Obj    |      |      |                              |
+| image.md        | string |      |      | 大網圖                       |
+| image.sm        | string |      |      | 小網圖                       |
+| title           | string |      |      |                              |
+| action          | obj    |      |      |                              |
+| action.text     | string |      |      |                              |
+| action.link     | string |      |      |                              |
+| action.btnStyle | string |      |      | only 'primary' or 'seconday' |
 
 [DEMO](http://fetnet-storybook.aja.com.tw/iframe.html?id=ad--global-banner-ad-01)
 
@@ -61,11 +59,31 @@ import GlobalBannerAd from '../components/ad/GlobalBannerAd';
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 必填 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| patternColor  | string | blue, gray |  | only 'blue' or 'gray' |
-| title | string |  |  |  |
-| action | object |  |  |  |
+| 名稱         | 屬性   | 選項       | 必填 | 說明                  |
+| :----------- | :----- | :--------- | :--- | :-------------------- |
+| patternColor | string | blue, gray |      | only 'blue' or 'gray' |
+| title        | string |            |      |                       |
+| action       | object |            |      |                       |
 
 [DEMO](http://fetnet-storybook.aja.com.tw/iframe.html?id=ad--global-banner-ad-01)
 
+## CbuPromotion
+
+```text
+import CbuPromotion from '../../ad/CbuPromotion';
+
+<CbuPromotion
+  id={tabContent.length - 1 === idx ? `mainView-"${idx + 1}-2` : `mainView-${idx + 1}-3`}
+  key={`banner-promotion-${idx}`}
+  {...tab.promotion}
+/>
+```
+
+#### Properties
+
+| 名稱   | 屬性   | 選項 | 必填 | 說明                  |
+| :----- | :----- | :--- | :--- | :-------------------- |
+| image  | obj    |      |      | default, retina, alt |
+| title  | string |      |      |                       |
+| description | string |      |      |                       |
+| description | action |      |      |text, link, target|
