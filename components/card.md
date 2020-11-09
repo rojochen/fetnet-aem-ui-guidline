@@ -1284,3 +1284,19 @@ import WithIconCard from '../../components/partials/card/WithIconCard';
 | :---- | :----- | :--- | :--- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | title | string |      |      |                                                                                                                                                                       |
 | cards | string |      |      | image: PropTypes.string,retinaImage: PropTypes.string,title: PropTypes.string,description: PropTypes.string,link: PropTypes.string,target: PropTypes.string, // _self |  | _blank |
+
+## TooltipCard
+
+```
+import TooltipCard from '../../components/card/TooltipCard';
+<TooltipCard title='小額代收設定' description='尚未開啟小額代收' tooltip='當開啟小額代收，你可使用與遠傳電信合作之小額商家服務購買數位內容，包含線上音樂、影音、遊戲虛寶儲值等商品。' action={{
+                  text: '立即開啟', link: '/phoneBillPaySettingController/getPhoneBillPaySettingOpenPage', btnStyle: 'primary'
+                }} />
+```
+
+| 名稱        | 屬性   | 選項 | 必填 | 說明                                                                                                  |
+| :---------- | :----- | :--- | :--- | :---------------------------------------------------------------------------------------------------- |
+| tooltip     | string |      |      |                                                                                                       |
+| title       | string |      |      |                                                                                                       |
+| description | string |      |      |                                                                                                       |
+| action      | obj    |      |      | text: PropTypes.string, link: PropTypes.string, btnStyle: PropTypes.string, disabled: PropTypes.bool, |
