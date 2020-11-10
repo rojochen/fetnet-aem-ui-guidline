@@ -322,3 +322,297 @@ export default Tab;
 * SolutionTab
 * PromotionArticle
 
+## DropdownTab
+
+處理網頁中在大網為 Tab，小網為 Dropdown 的樣式。
+
+{% code title="DropdownTab.js" %}
+```jsx
+import React from 'react';
+import Tab from './Tab';
+import PropTypes from 'prop-types';
+
+class DropdownTab extends React.Component {
+    constructor(props) {
+        super(props);
+        this.menu = React.createRef();
+        this.state = {
+            menuHeight: 0,
+            currentTab: this.props.default || 0,
+            menuOpen: false
+        };
+        
+        this.setMenuHeight = this.setMenuHeight.bind(this)
+    }
+
+    componentDidMount() {
+        this.setMenuHeight()
+
+        window.addEventListener('resize', e => {
+            this.setMenuHeight()
+        })
+    }
+    
+    setMenuHeight() {
+        if(!this.menu.current) return;
+        
+        this.setState({
+            menuHeight: this.menu.current.children[0].clientHeight
+        })
+    }
+
+    toggleMenu() {
+        this.setState({
+            menuOpen: !this.state.menuOpen
+        })
+    }
+    
+    closeMenu() {
+        this.setState({
+            menuOpen: false
+        })
+    }
+
+    onChange(e) {
+        this.closeMenu()
+        this.setState({
+            currentTab: e
+        })
+        this.props.onChange(e)
+    }
+    
+    handleChange(index) {
+        this.closeMenu()
+        this.setState({
+            currentTab: index
+        })
+    }
+
+    render() {
+        return (
+            <div className="fui-tab-container mobile-dropdown">
+                <button className="display" onClick={e => this.toggleMenu(e)}>
+                    <span>{this.props.tabs.list[this.state.currentTab].label}</span>
+                    <i className="icon-chevron-down"></i>
+                </button>
+                <div 
+                className="fui-menu" 
+                ref={this.menu} 
+                style={{height: this.state.menuOpen ? this.state.menuHeight : 0 }}>
+                    <Tab 
+                    {...this.props.tabs} 
+                    default={this.props.default}
+                    className={`${this.state.menuOpen ? 'is-open' : ''}`} 
+                    onChange={e => this.onChange(e)} />
+                </div>
+            </div>
+        )
+    }
+}
+
+
+DropdownTab.propTypes = {
+    default: PropTypes.number,
+    tabs: PropTypes.shape({
+        name: PropTypes.string,
+        list: PropTypes.arrayOf(
+            PropTypes.shape({
+                icon: PropTypes.string,
+                focusIcon: PropTypes.string,
+                label: PropTypes.string.isRequired,
+                link: PropTypes.string
+            })
+        )
+    }),
+    onChange: PropTypes.func
+}
+
+export default DropdownTab;
+```
+{% endcode %}
+
+#### Properties
+
+| 名稱     | 屬性     | 選項 | 必填 | 說明                                                                                                                                         |
+| :------- | :------- | :--- | :--- | :------------------------------------------------------------------------------------------------------------------------------------------- |
+| default  | Number   | \`\` |      | 預設選取的索引值                                                                                                                             |
+| tabs     | Object   |      |      | 使用 [Tab](https://app.gitbook.com/@ajacreative/s/fetnet-1/~/drafts/-M1PX30KNQdcrffdEZXC/components/tab)  的資料結構，取用 name 和 list 項目 |
+| onChange | Function |      |      |                                                                                                                                              |
+
+### has-more-tab
+
+Panel內tab的樣式, 可在選項內增加屬於panel內的元素, 選項選項寬度均分.   
+Tab:  
+ • 依需求增減選項數量，選項超過5項會在最後的選項以收和方式下拉呈現.   
+• Tab小網超過5項會自動收合成下拉選單.   
+• 下拉選單最多顯示3項，超過3項自動顯示捲動條並可上下捲動
+
+小網在2、3個選項的時候選項寬度均分, 4欄以上寬度限制為120px, 並可左右捲動.
+
+• 選項欄位字元數限制=20.
+
+{% tabs %}
+{% tab title="Web" %}
+![](../.gitbook/assets/image%20%28239%29.png)
+{% endtab %}
+
+{% tab title="Mobile" %}
+![](../.gitbook/assets/image%20%28162%29.png)
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Usage" %}
+```jsx
+import Panel from '../components/panel/Panel';
+import HasMoreTab from '../components/tab/HasMoreTab';
+
+class Page extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentTab: 0
+    }
+  }
+
+  handleChange = e => {
+    setCurrentTab({
+      currentTab: e
+    });
+  }
+
+  render () {
+    return (
+      <Panel>
+        <HasMoreTab 
+          tabs={[
+            { name: 'tab-1', label: '遠傳大人物', value: '遠傳大人物', text: '遠傳大人物', index: 0 },
+            { name: 'tab-2', label: '醫療商機', value: '醫療商機', text: '醫療商機', index: 1 },
+            { name: 'tab-3', label: 'AIOT', value: 'AIOT機', text: 'AIOT', index: 2 },
+            { name: 'tab-4', label: '全部期刊', value: '全部期刊', text: '全部期刊', index: 3 },
+          ]}
+          dropdown={[
+            { name: 'tab-5', label: '5G', value: '5G', text: '5G', index: 4 },
+            { name: 'tab-6', label: '車聯網', value: '車聯網', text: '車聯網', index: 5 },
+            { name: 'tab-7', label: '智慧城市', value: '智慧城市', text: '智慧城市', index: 6 },
+          ]}
+          onChange={this.handleChange} 
+        />
+      </Panel>
+    )
+  }
+}
+```
+{% endtab %}
+
+{% tab title="HasMoreTab.js" %}
+```jsx
+import React from 'react';
+import Dropdown from '../Dropdown';
+import PropTypes from 'prop-types';
+
+class HasMoreTab extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      defaultLabel: this.props.tabs[0],
+      tabs: this.props.tabs,
+      selectedTab: { name: 'tab-1', label: '遠傳大人物' },
+    };
+    this.changeDropdown = this.changeDropdown.bind(this);
+    this.changeSelection = this.changeSelection.bind(this);
+    this.onActive = this.onActive.bind(this);
+  }
+  
+  componentDidMount() {
+    this.setState({
+      selectDropdown: this.state.defaultLabel,
+    });
+  }
+  
+  onActive = () => {
+    this.setState({
+      selectedTab: 'more',
+    });
+  };
+
+  changeDropdown(item) {
+    this.setState({
+      selectDropdown: { ...item },
+    });
+    // this.setState({
+    //   selectedTab: 'more'
+    // })
+    this.props.onChange(item.index);
+  }
+
+  changeSelection(item, index) {
+    this.setState({
+      selectedTab: item,
+    });
+    this.props.onChange(index);
+    console.log(this.state.selectedTab);
+  }
+  
+  getTabs = () => {
+    return this.state.tabs.map((item, index) => {
+      return (
+        <div
+          key={item.label}
+          className={`tab ${this.state.selectedTab.label === item.label ? 'active' : ''}`}
+          value={item.name}
+          onClick={e => this.changeSelection(item, index)}>
+          {item.label}
+        </div>
+      );
+    });
+  };
+
+  render() {
+    return (
+      <div className='has-more-tab'>
+        <div className='tab-wrapper'>
+          {this.getTabs()}
+          <Dropdown
+            label='更多'
+            list={this.props.dropdown}
+            arrow={true}
+            onChange={this.changeDropdown}
+            onActive={this.onActive}
+            hasCheck={true}
+            className={`is-right is-bottom is-reverse ${this.state.selectedTab === 'more' ? 'active' : ''}`}
+          />
+        </div>
+      </div>
+    );
+  }
+}
+
+HasMoreTab.propTypes = {
+  tabs: PropTypes.array,
+  dropdown: PropTypes.array,
+  onChange: PropTypes.func,
+};
+
+export default HasMoreTab;
+
+```
+{% endtab %}
+{% endtabs %}
+
+
+## TabPane
+
+```
+import TabPane from '../tab/TabPane';
+<TabPane active={this.state.currentTab === i} key={`collapseList-${i}`}>
+...content
+<TabPane />
+```
+
+#### Properties
+
+| 名稱     | 屬性 | 選項 | 必填 | 說明 |
+| :------- | :--- | :--- | :--- | :--- |
+| active   | bool |      |      |      |
+| children | any  |      | true |      |
