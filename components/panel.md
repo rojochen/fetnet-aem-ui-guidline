@@ -54,9 +54,9 @@ export default Panel;
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| children  | Node |  | \`\` | 可輸入 HTML 或下方其他 PanelContent的模組 |
+| 名稱     | 屬性 | 必填 | 選項 | 說明                                      |
+| :------- | :--- | :--- | :--- | :---------------------------------------- |
+| children | Node |      | \`\` | 可輸入 HTML 或下方其他 PanelContent的模組 |
 
 ## CollapsePanel
 
@@ -199,12 +199,12 @@ export default CollapsePanel;
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title  | String | true | \`\` |  |
-| description | String |  |  |  |
-| collapseTitle | String | true |  |  |
-| children | Any |  |  |  |
+| 名稱          | 屬性   | 必填 | 選項 | 說明 |
+| :------------ | :----- | :--- | :--- | :--- |
+| title         | String | true | \`\` |      |
+| description   | String |      |      |      |
+| collapseTitle | String | true |      |      |
+| children      | Any    |      |      |      |
 
 ## PanelContent
 
@@ -249,9 +249,9 @@ export default PanelTitle1;
 
 #### Properties
 
-| 名稱 | 屬性 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- |
-| title  | String | \`\` | 放入文字即可 |
+| 名稱  | 屬性   | 選項 | 說明         |
+| :---- | :----- | :--- | :----------- |
+| title | String | \`\` | 放入文字即可 |
 
 
 
@@ -302,10 +302,10 @@ export default PanelTitle2;
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title  | String | true | \`\` | 放入文字即可 |
-| icon | String | true |  | 可放入大小為 160px \(retina @2x 圖片\) 的圖片連結 |
+| 名稱  | 屬性   | 必填 | 選項 | 說明                                              |
+| :---- | :----- | :--- | :--- | :------------------------------------------------ |
+| title | String | true | \`\` | 放入文字即可                                      |
+| icon  | String | true |      | 可放入大小為 160px \(retina @2x 圖片\) 的圖片連結 |
 
 
 
@@ -412,9 +412,9 @@ import PanelContent from '../components/panelContent/PanelContent';
 
 Panel內的條列式內文樣式，3種項目符號依不同情境選擇使用check
 
-| check | bulleted | number |
-| :--- | :--- | :--- |
-| ![](../.gitbook/assets/image%20%28144%29.png)  | ![](../.gitbook/assets/image%20%28103%29.png)  | ![](../.gitbook/assets/image%20%28228%29.png)  |
+| check                                         | bulleted                                      | number                                        |
+| :-------------------------------------------- | :-------------------------------------------- | :-------------------------------------------- |
+| ![](../.gitbook/assets/image%20%28144%29.png) | ![](../.gitbook/assets/image%20%28103%29.png) | ![](../.gitbook/assets/image%20%28228%29.png) |
 
 {% tabs %}
 {% tab title="Usage" %}
@@ -516,9 +516,9 @@ export default PanelList;
 
 Panel內的超連結樣式, 通常使用在內文段落之後, 兩種樣式供選擇, 建議適當使用solid版本.
 
-| text | solid |
-| :--- | :--- |
-| ![](../.gitbook/assets/image%20%28169%29.png)  | ![](../.gitbook/assets/image%20%2840%29.png)  |
+| text                                          | solid                                        |
+| :-------------------------------------------- | :------------------------------------------- |
+| ![](../.gitbook/assets/image%20%28169%29.png) | ![](../.gitbook/assets/image%20%2840%29.png) |
 
 {% tabs %}
 {% tab title="Usage" %}
@@ -569,11 +569,11 @@ export default PanelButton;
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| btnStyle  | String |  |   `solid` | 不填寫預設為文字搭配箭頭，選擇 solid 則為有框線按鈕 |
-| text | String | true |  | 按鈕文字 |
-| link | String | true |  | 按鈕連結 |
+| 名稱     | 屬性   | 必填 | 選項    | 說明                                                |
+| :------- | :----- | :--- | :------ | :-------------------------------------------------- |
+| btnStyle | String |      | `solid` | 不填寫預設為文字搭配箭頭，選擇 solid 則為有框線按鈕 |
+| text     | String | true |         | 按鈕文字                                            |
+| link     | String | true |         | 按鈕連結                                            |
 
 
 
@@ -672,10 +672,10 @@ export default PanelTip;
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title | String | true |  | 註解標題 |
-| content | String | true |  | 註解內文 |
+| 名稱    | 屬性   | 必填 | 選項 | 說明     |
+| :------ | :----- | :--- | :--- | :------- |
+| title   | String | true |      | 註解標題 |
+| content | String | true |      | 註解內文 |
 
 
 
@@ -791,11 +791,11 @@ export default PanelFigure1
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| image | String | true |  | 圖片路徑 |
-| caption | String |  |  | 圖片說明 |
-| inline | Boolean |  |  | 是否為兩欄排列 |
+| 名稱    | 屬性    | 必填 | 選項 | 說明           |
+| :------ | :------ | :--- | :--- | :------------- |
+| image   | String  | true |      | 圖片路徑       |
+| caption | String  |      |      | 圖片說明       |
+| inline  | Boolean |      |      | 是否為兩欄排列 |
 
 
 
@@ -889,9 +889,9 @@ export default PanelFigure2;
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| figures | Array | true |  | {   link: string,         圖片要導入的錨點或頁面   image: string,    圖片路徑 } |
+| 名稱    | 屬性  | 必填 | 選項 | 說明                                                                            |
+| :------ | :---- | :--- | :--- | :------------------------------------------------------------------------------ |
+| figures | Array | true |      | {   link: string,         圖片要導入的錨點或頁面   image: string,    圖片路徑 } |
 
 
 
@@ -1408,11 +1408,11 @@ export default PanelFlowContainer;
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title | String | true |  | 流程標題 |
-| number | Number | true |    | 流程順序 |
-| children | Node |  |  | 流程內容，可放 PanelContent 任何元件。 唯獨不可與  `PanelFlowContainer` `PanelFlow` 重複疊加。 |
+| 名稱     | 屬性   | 必填 | 選項 | 說明                                                                                           |
+| :------- | :----- | :--- | :--- | :--------------------------------------------------------------------------------------------- |
+| title    | String | true |      | 流程標題                                                                                       |
+| number   | Number | true |      | 流程順序                                                                                       |
+| children | Node   |      |      | 流程內容，可放 PanelContent 任何元件。 唯獨不可與  `PanelFlowContainer` `PanelFlow` 重複疊加。 |
 
 ### panel-table
 
@@ -1605,9 +1605,9 @@ export default PanelTable;
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| content | String | true |  | 直接放入表格 HTML |
+| 名稱    | 屬性   | 必填 | 選項 | 說明              |
+| :------ | :----- | :--- | :--- | :---------------- |
+| content | String | true |      | 直接放入表格 HTML |
 
 
 
@@ -1670,10 +1670,10 @@ export default PanelInformation;
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| title | String | true |  | 說明標題 |
-| content | String | true |  | 說明內容 |
+| 名稱    | 屬性   | 必填 | 選項 | 說明     |
+| :------ | :----- | :--- | :--- | :------- |
+| title   | String | true |      | 說明標題 |
+| content | String | true |      | 說明內容 |
 
 
 
@@ -2134,8 +2134,351 @@ export default connect(mapStateToProps, {setTabUpdate})(TabPane);
 
 #### Properties
 
-| 名稱 | 屬性 | 必填 | 選項 | 說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| active | bool |  |  | 是否開啟分頁 |
-| children | any | true |  | 塞入的內容 |
+| 名稱     | 屬性 | 必填 | 選項 | 說明         |
+| :------- | :--- | :--- | :--- | :----------- |
+| active   | bool |      |      | 是否開啟分頁 |
+| children | any  | true |      | 塞入的內容   |
 
+
+## ArticleAuthorPanel
+```
+<ArticleAuthorPanel
+  img='/resources/cbu/life-circle-article/images/author-avatar-01.png'
+  alt=''
+  title='江懷哲／躁動的太平洋'
+  desc='<div class="body-3">政大外交輔修歷史系畢業，並曾於加州大學柏克萊分校與北京大學交換學習，現正於英國劍橋大學攻讀碩士學位。目前嘗試用書寫參與世界，文章散見換日線、轉角國際、端傳媒等媒體。</div>'
+/>
+```
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| img       | string |      |      |      |
+| alt       | string |      |      |      |
+| title     | string |      |      |      |
+| desc      | string |      |      |      |
+| className | string |      |      |      |
+
+## ArticleAuthorSimplePanel
+
+```
+import ArticleAuthorSimplePanel from '../../components/panel/ArticleAuthorSimplePanel';
+<ArticleAuthorSimplePanel
+  borderAuthor1='文字：江懷哲'
+  borderAuthor2='攝影：Yiya Chou'
+>
+```
+
+| 名稱          | 屬性   | 選項 | 必填 | 說明 |
+| :------------ | :----- | :--- | :--- | :--- |
+| borderAuthor1 | string |      |      |      |
+| borderAuthor2 | string |      |      |      |
+
+## ArticleCitationPanel
+
+```
+import ArticleCitationPanel from '../../components/panel/ArticleCitationPanel';
+<ArticleCitationPanel children='在這樣試用(玩)過一輪四種不同接頭後，電量還有剩！據官網說法：「將高能量的動力型聚合物鋰電池首創用於吸塵器。同 Apple 手機、BMW 電動車的電池技術，將「高續航」、「耐用持久」、「重量輕盈」等優勢集於一身。」一次充飽電，可以連續使用90分鐘！'></ArticleCitationPanel>
+```
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| className | string |      |      |      |
+| children  | any    |      | true |      |
+
+## ArticlePanel
+```
+import Panel from '../../components/panel/ArticlePanel';
+<Panel className='article-intro-panel'>
+  <p>
+    常在關注募資網的朋友應該對「石頭科技」並不陌生，前年推出的「小瓦掃地機器人」，以CP值破表的稱號，熱銷全台超過4,000台、集資金額超過3,600萬台幣，而引起熱議。
+    <br />
+    <br />
+    今年初它們在眾所矚目下同樣推出懶人救星的清潔家電—「H6
+    旗艦無線吸塵器」，同樣也不讓人失望，引發各界好評。就讓編輯為大家開箱、實際試用看看這款產品吧。
+  </p>
+</Panel>
+```
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| className | string |      |      |      |
+| children  | any    | true |      |      |
+
+## ArticleTagsPanel
+```
+import ArticleTagsPanel from '../../components/panel/ArticleTagsPanel';
+<ArticleTagsPanel
+  tags={[
+    {
+      title: '智能家電',
+      url: '#',
+    },
+    {
+      title: 'DYSON',
+      url: '#',
+    },
+    {
+      title: 'friDay購物',
+      url: '#',
+    },
+    {
+      title: '遠傳幣',
+      url: '#',
+    },
+    {
+      title: '智慧家電',
+      url: '#',
+    },
+    {
+      title: '打掃神器',
+      url: '#',
+    },
+  ]}></ArticleTagsPanel>
+```
+
+#### Properties
+
+| 名稱 | 屬性  | 選項 | 必填 | 說明                                           |
+| :--- | :---- | :--- | :--- | :--------------------------------------------- |
+| tags | array |      |      | title: PropTypes.string, url: PropTypes.string |
+
+## PanelContainer
+
+```
+import PanelContainer from '../../components/panel/PanelContainer';
+<PanelContainer
+  initial={false}
+  className='mb-md-10 px-md-4 px-3'
+  >
+  ...content
+<PanelContainer />
+```
+
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| children  | any    |      | true |      |
+| className | string |      |      |      |
+
+## PanelContainer1
+
+```
+import PanelContainer1 from '../../components/panel/PanelContainer1';
+<PanelContainer1
+  // bgColor="#111"
+  title="活動說明"
+  content={`<div class="is-bg-lightgray70 px-3 py-3 mb-2"><h5 class="is-text-darkgray50 is-text-regular mb-1 mt-0">活動日期</h5><h2 class="">即日至<div class="border-bottom">2020/05/31</div></h2></div><img class="w-100" src="/resources/cbu/img/cbu-feature-scenario-goshareB-1920x500.jpg" alt="">`}
+>
+
+</PanelContainer1>
+```
+
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| title     | string |      |      |      |
+| content   | string |      |      |      |
+| className | string |      |      |      |
+
+## PanelContainer3
+
+```
+import PanelContainer3 from '../../components/panel/PanelContainer3';
+<PanelContainer3
+  initial={true}
+  // bgColor="#111"
+  data={[
+    {
+      title: 'Article title',
+      contentPosition: 'left',
+      content: '<p>飯集有此是一，間推優命歡放定們獲大絕第中，條車人的氣路自我，我縣說少往上我，山中的音！我無要術！</p><div class="fui-list mb-0"><div class="fui-item  "><span class="prefix"><i class="is-text-accent icon-check"></i></span><span class="content">Item Option 1</span></div><div class="fui-item  "><span class="prefix"><i class="is-text-accent icon-check"></i></span><span class="content">Item Option 2</span></div><div class="fui-item  "><span class="prefix"><i class="is-text-accent icon-check"></i></span><span class="content">Item Option 3</span></div></div><div class="fui-list mb-0"><div class="fui-item  "><span class="prefix"><i class="bulleted-dot"></i></span><span class="content">Item Option 1</span></div><div class="fui-item  "><span class="prefix"><i class="bulleted-dot"></i></span><span class="content">Item Option 2</span></div><div class="fui-item  "><span class="prefix"><i class="bulleted-dot"></i></span><span class="content">Item Option 3</span></div></div>',
+      img: {
+        width: '600px',
+        url: 'https://placeimg.com/1200/900/any',
+        alt: 'img'
+      }
+    },
+    {
+      title: 'Article title',
+      contentPosition: 'right',
+      content: '<p>飯集有此是一，間推優命歡放定們獲大絕第中，條車人的氣路自我，我縣說少往上我，山中的音！我無要術！飯集有此是一，間推優命歡放定們獲大絕第中，條車人的氣路自我，我縣說少往上我，山中的音！我無要術！飯集有此是一，間推優命歡放定們獲大絕第中，條車人的氣路自我，我縣說少往上我，山中的音！我無要術！飯集有此是一，間推優命歡放定們獲大絕第中，條車人的氣路自我，我縣說少往上我，山中的音！我無要術！飯集有此是一，間推優命歡放定們獲大絕第中，條車人的氣路自我，我縣說少往上我，山中的音！我無要術！</p>',
+      img: {
+        width: '600px',
+        url: 'https://placeimg.com/1200/900/any',
+        alt: 'img'
+      }
+    },
+  ]}
+/>
+```
+
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明                                                                                                                                                       |
+| :-------- | :----- | :--- | :--- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| title     | string |      |      |                                                                                                                                                            |
+| bgColor   | string |      |      |                                                                                                                                                            |
+| initial   | bool   |      |      |                                                                                                                                                            |
+| content   | string |      |      |                                                                                                                                                            |
+| className | string |      |      |                                                                                                                                                            |
+| data      | arry   |      |      | title: PropTypes.string,width: PropTypes.string,image: PropTypes.string,alt: PropTypes.string,content: PropTypes.string,contentPosition: PropTypes.string, |
+
+## PanelContainer4
+
+```
+import PanelContainer4 from '../../components/panel/PanelContainer4';
+<PanelContainer4
+  initial={true}
+  // bgColor="#111"
+  list={[
+    {
+      image: 'https://placeimg.com/1200/600/any',
+      caption: 'An image from placeIMG'
+    },
+    {
+      image: '/resources/cbu/img/img-ebill-printscreen@2x.jpg',
+      inline: true,
+      caption: 'An image from placeIMG'
+    },
+    {
+      image: '/resources/cbu/img/img-ebill-printscreen@2x.jpg',
+      inline: true,
+      caption: 'An image from placeIMG'
+    },
+  ]}
+>
+</PanelContainer4>
+```
+
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| title     | string |      |      |      |
+| content   | string |      |      |      |
+| className | string |      |      |      |
+
+## PanelContainer5
+
+```
+import PanelContainer5 from '../../components/panel/PanelContainer5';
+<PanelContainer5
+  initial={true}
+  bgColor="#eff4f1"
+  title="Panel-5"
+  list={[
+    {
+      figures: [
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+      ]
+    },
+    {
+      column: 4,
+      figures: [
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+        { link: '#', image: 'https://placeimg.com/900/900/any' },
+      ]
+    }
+  ]}
+>
+</PanelContainer5>
+```
+
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明 |
+| :-------- | :----- | :--- | :--- | :--- |
+| title     | string |      |      |      |
+| content   | string |      |      |      |
+| className | string |      |      |      |
+## PanelContainer6
+
+```
+import PanelContainer6 from '../../components/panel/PanelContainer6';
+<PanelContainer6
+  initial={true}
+  content={`<h4 class="mt-md-7 mt-3 mb-2">GoShare騎乘金說明：</h4><p class="mt-md-4 mt-2">請於完成方案申辦後，<div class="border-bottom">自行以方案門號完成註冊GoShare APP會員</div>，如方案門號申辦後次月5日前，未完成註冊GoShare APP會員，視同放棄當月GoShare騎乘金優惠券，恕無法補發。GoShare詳細營運地區及騎乘金使用規範，請參考 GoShare App。</p><h4 class="mt-md-7 mt-4">GoShare營運範圍：</h4><ul class="green-dot-list mb-md-6 mb-4"><li>台北市、桃園市<span class="border-bottom">24小時隨借隨還</span></li><li>新北青春山海線<span class="border-bottom">24小時隨借隨還</span></li></ul>`}
+  btnList={[
+    {
+      text: '下載GoShare APP',
+      link: '#'
+    },
+    {
+      text: '服務內容',
+      link: '#'
+    },
+    {
+      text: '服務內容',
+      link: '#'
+    },
+    {
+      text: '服務內容',
+      link: '#'
+    },
+  ]}
+>
+</PanelContainer6>
+```
+
+#### Properties
+
+| 名稱      | 屬性   | 選項 | 必填 | 說明                                          |
+| :-------- | :----- | :--- | :--- | :-------------------------------------------- |
+| title     | string |      |      |                                               |
+| content   | string |      |      |                                               |
+| className | string |      |      |                                               |
+| bgColor   | string |      |      |                                               |
+| initial   | string |      |      |                                               |
+| btnList   | array  |      |      | text: PropTypes.string,link: PropTypes.string |
+
+## PanelMultiSteps
+
+```
+import PanelMultiSteps from '../../components/panel/PanelMultiSteps';
+<PanelMultiSteps
+  // bg="/resources/cbu/img/cbu-goshare-bg-yellow3.png"
+  {...{
+    title: 'PanelMultiSteps',
+    hasMore: true,
+    list: [
+      {
+        name: '請選取「設定」中的「Wi-Fi」功能',
+        img: '/resources/cbu/otherService/01.png'
+      },
+      {
+        name: '手機自動搜尋「FET Wi-Fi Auto」, 進行認證後即自動登入',
+        img: '/resources/cbu/otherService/02.png'
+      },
+      {
+        name: '成功登入後，顯示「已連線」即可開始上網',
+        img: '/resources/cbu/otherService/03.png'
+      }
+    ],
+  }}
+  loadMore={this.loadMore}
+/>
+```
+
+
+#### Properties
+
+| 名稱     | 屬性   | 選項 | 必填 | 說明                                              |
+| :------- | :----- | :--- | :--- | :------------------------------------------------ |
+| title    | string |      |      |                                                   |
+| list     | array  |      |      | name: PropTypes.string,content: PropTypes.string, |
+| bg       | string |      |      |                                                   |
+| loadMore | func   |      |      |                                                   |
