@@ -40,12 +40,12 @@
 | lg | >= 1200px |
 | xl | >= 1920px |
 
-- `MuiGrid-container` 可設定 `MuiGrid-spacing-xs-{1 ~ 6}` 增加欄位間距
+- `MuiGrid-container` 可設定 `MuiGrid-spacing-{size}-{1 ~ 6}` 增加欄位間距
 - Grid column 可設定 1 ~ 12 並根據需要修改設定 `sm`、`md`、`lg`、`xl` 等尺寸的欄位寬度。
 
 **SAMPLE**
 ```html
-<div class='MuiGrid-root MuiGrid-container'>
+<div class='MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2'>
   <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-6'>
   </div>
   <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-6'>
@@ -67,12 +67,31 @@
    <td>p, .text, .body-1
    </td>
    <td colspan="2" ><strong>字級：</strong>16px(1rem)，<strong>行距：</strong>28px
+
+**使用範例**
+```html
+<p>
+  一般內文
+</p>
+
+<div class='body-1'>一般內文</div>
+
+<div class='text'>一般內文</div>
+```
    </td>
   </tr>
   <tr>
    <td>h1, .heading-1
    </td>
    <td colspan="2" ><strong>字級：</strong>32px，<strong>行距：</strong>32px
+
+**使用範例**
+```html
+<h1>
+  Heading1 文字
+</h1>
+<div class='heading-1'></div>
+```
    </td>
   </tr>
   <tr>
@@ -155,7 +174,9 @@
 
 **SAMPLE**
 ```
-  <span class='highlight border-bottom'>要 highlight 的文字</span>
+<p>
+  一個段落裡<span class='highlight border-bottom'>要 highlight 的文字</span>
+</p>
 ```
    </td>
   </tr>
@@ -225,6 +246,17 @@
    <td>置中對齊
    </td>
    <td rowspan="6" >可參考<strong>瀏覽器斷點</strong>，在斷點以上的尺寸就會使用相關設定。
+
+使用範例
+```html
+<div class='align-right'>
+  文字會靠右對齊
+</div>
+
+<h1 class='align-center'>
+  文字置中對齊
+</h1>
+```
    </td>
   </tr>
   <tr>
