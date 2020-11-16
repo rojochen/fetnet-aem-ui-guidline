@@ -5,6 +5,7 @@
   - [Summary](#summary)
   - [Container](#container)
   - [網格系統](#網格系統)
+  - [修改樣式](#修改樣式)
   - [文字樣式](#文字樣式)
   - [顯示方式](#顯示方式)
   - [文字對齊](#文字對齊)
@@ -52,6 +53,14 @@
   </div>
 </div>
 ```
+
+--- 
+
+## 修改樣式
+
+![](./images/demo.png)
+
+在更新前可使用瀏覽器 debug mode 多測試樣式效果及使用方式。
 
 --- 
 
@@ -308,6 +317,8 @@
 
 **m：** margin | **p：** padding 
 
+**數字：** 1 ~ 10，以 8px 為單位
+
 **dir(方向)**
 **t：** 上  |  **b：** 下  |  **l：** 左  |  **r：** 右  |  **x：** 左右間距  |  **y：** 上下間距 
  
@@ -361,6 +372,7 @@
 --- 
 
 ## 連結
+連結樣式主要用字啊 AEM、CBU 環境中。
 | 樣式名稱 | 範例 | 範例(Hover) | 說明 |
 | :--- | :--- | :--- | :--- |
 | .underline-link | ![underline-link](./images/underline-link.png) | ![underline-link](./images/underline-link.png) | 加上 ` is-text-black50` 可變成黑色底線 |
@@ -417,6 +429,8 @@
 
 **SAMPLE**
 
+按鈕 HTML 中，文字必須用 `<span class='text'>...</span>` 包住，避免要搭配 icon 及圖片時對齊跑掉。
+
 ```html
 <a class="fui-button is-primary">
   <span class='text'>Button</span>
@@ -431,7 +445,8 @@
 </a>
 
 <a class="fui-button is-text">
-  <span class="text">Button</span><i class="icon-chevron-right"></i>
+  <span class="text">Button</span>
+  <i class="icon-chevron-right"></i>
 </a>
 ```
 
@@ -489,6 +504,9 @@
 ---
 
 ## Panel
+
+Panel 可搭配前面的樣式設定修改間距或背景文字顏色。
+
 ![panel](./images/panel.png)
 
 ```html
