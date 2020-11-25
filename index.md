@@ -5,6 +5,7 @@
   - [Summary](#summary)
   - [Container](#container)
   - [網格系統](#網格系統)
+    - [Grid 對齊方式](#grid-對齊方式)
   - [修改樣式](#修改樣式)
   - [文字樣式](#文字樣式)
   - [顯示方式](#顯示方式)
@@ -46,10 +47,93 @@
 
 **SAMPLE**
 ```html
+<!--  預設  -->
+<div class='MuiGrid-root MuiGrid-container'>
+  <div class='MuiGrid-root MuiGrid-item'>
+  </div>
+  <div class='MuiGrid-root MuiGrid-item'>
+  </div>
+</div>
+
+<!--  增加間距  -->
+uiGrid-spacing-xs-{space} 間距為 0 ~ 10，以 8px 為單位增加。
+<div class='MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2'>
+  <div class='MuiGrid-root MuiGrid-item'>
+  </div>
+  <div class='MuiGrid-root MuiGrid-item'>
+  </div>
+</div>
+
+<!--  欄位設定  -->
+欄位總數相加必須在 12 以內。
+
+兩欄排列：
 <div class='MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2'>
   <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-6'>
   </div>
   <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-6'>
+  </div>
+</div>
+
+三欄排列：
+<div class='MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2'>
+  <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-4'>
+  </div>
+  <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-4'>
+  </div>
+  <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-4'>
+  </div>
+</div>
+
+小網兩欄、大網四欄排列：
+<div class='MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2'>
+  <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-3'>
+  </div>
+  <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-3'>
+  </div>
+  <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-3'>
+  </div>
+  <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-3'>
+  </div>
+</div>
+```
+
+### Grid 對齊方式
+由於網格系統可只放一欄，並設定大網欄位寬度不需完全滿版，於是有對應 flexbox 排列方式，以下列出水平與垂直置中方式以供參考。
+
+**水平對齊**
+
+- MuiGrid-justify-xs-**{對齊方式}**
+
+| 樣式名稱 | 說明 |
+| :--- | :--- |
+| flex-start | 欄位靠左排列 |
+| center | 欄位置中 |
+| flex-end | 欄位靠右排列 |
+| space-between | 欄位等距，且左右靠邊 |
+| space-around | 欄位等距，且左右不靠邊，與左右的間距為欄位間的一半 |
+| space-evenly | 欄位間與左右邊皆等距 |
+
+**垂直對齊**
+
+- MuiGrid-align-items-xs-**{對齊方式}**
+
+| 樣式名稱 | 說明 |
+| :--- | :--- |
+| flex-start | 靠上對齊 |
+| center | 垂直置中 |
+| flex-end | 靠下對齊 |
+| stretch | 欄位直接等高 |
+| baseline | 若欄位不等高，會依容器的基準線對齊 |
+
+
+**SAMPLE**
+```html
+<!--  左右置中，靠上對齊  -->
+<div class='MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center MuiGrid-align-items-xs-flex-start'>
+  <div class='MuiGrid-root MuiGrid-item'>
+  </div>
+  <div class='MuiGrid-root MuiGrid-item'>
   </div>
 </div>
 ```
