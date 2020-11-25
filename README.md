@@ -127,6 +127,16 @@ uiGrid-spacing-xs-{space} 間距為 0 ~ 10，以 8px 為單位增加。
 | baseline | 若欄位不等高，會依容器的基準線對齊 |
 
 
+**SAMPLE**
+```html
+<!--  左右置中，靠上對齊  -->
+<div class='MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center MuiGrid-align-items-xs-flex-start'>
+  <div class='MuiGrid-root MuiGrid-item'>
+  </div>
+  <div class='MuiGrid-root MuiGrid-item'>
+  </div>
+</div>
+```
 
 --- 
 
