@@ -15,7 +15,7 @@
   - [連結](#連結)
   - [表格](#表格)
   - [按鈕](#按鈕)
-    - [按鈕排列(PageAction)](#按鈕排列pageaction)
+    - [按鈕排列(PanelPageAction)](#按鈕排列panelpageaction)
   - [清單](#清單)
   - [Panel](#panel)
   - [圖片](#圖片)
@@ -545,25 +545,25 @@ uiGrid-spacing-xs-{space} 間距為 0 ~ 10，以 8px 為單位增加。
 </a>
 ```
 
-### 按鈕排列(PageAction) 
+### 按鈕排列(PanelPageAction) 
 
-為了按鈕並排時方便大小網排列美觀，提供 page-action 樣式
+為了按鈕並排時方便大小網排列美觀，提供 panel-page-action 樣式
 
 | 樣式名稱 | 說明 |
 | :--- | :--- |
-| .page-action | 小網按鈕一律滿版，大網則依內容自動排列 |
-| .page-action.two-button | 小網按鈕左右各佔 50%，大網則依內容自動排列 |
+| .panel-page-action | 小網按鈕一律滿版，大網則依內容自動排列 |
+| .panel-page-action.two-button | 小網按鈕左右各佔 50%，大網則依內容自動排列 |
 
 
 ```html
-<div class="page-action">
+<div class="panel-page-action">
   <a class="fui-button is-primary">
     <span class='text'>Button</span>
   </a>
 <div>
 
 
-<div class="page-action two-button">
+<div class="panel-page-action two-button">
   <a class="fui-button is-primary">
     <span class='text'>Button</span>
   </a>
