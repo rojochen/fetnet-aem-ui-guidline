@@ -521,6 +521,16 @@ uiGrid-spacing-xs-{space} 間距為 0 ~ 10，以 8px 為單位增加。
   <span class='text'>Button</span>
 </a>
 
+<!-- 按鈕加大 -->
+<a class="fui-button is-primary is-large">
+  <span class='text'>Button</span>
+</a>
+
+<!-- 按鈕縮小 -->
+<a class="fui-button is-primary is-small">
+  <span class='text'>Button</span>
+</a>
+
 <a class="fui-button is-secondary is-reverse" disabled>
   <span class="text">Button</span>
 </a>
