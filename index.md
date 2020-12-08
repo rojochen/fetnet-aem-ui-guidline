@@ -15,6 +15,7 @@
   - [連結](#連結)
   - [表格](#表格)
   - [按鈕](#按鈕)
+    - [按鈕排列(PageAction)](#按鈕排列pageaction)
   - [清單](#清單)
   - [Panel](#panel)
   - [圖片](#圖片)
@@ -534,6 +535,34 @@ uiGrid-spacing-xs-{space} 間距為 0 ~ 10，以 8px 為單位增加。
 </a>
 ```
 
+### 按鈕排列(PageAction) 
+
+為了按鈕並排時方便大小網排列美觀，提供 page-action 樣式
+
+| 樣式名稱 | 說明 |
+| :--- | :--- |
+| .page-action | 小網按鈕一律滿版，大網則依內容自動排列 |
+| .page-action.two-button | 小網按鈕左右各佔 50%，大網則依內容自動排列 |
+
+
+```html
+<div class="page-action">
+  <a class="fui-button is-primary">
+    <span class='text'>Button</span>
+  </a>
+<div>
+
+
+<div class="page-action two-button">
+  <a class="fui-button is-primary">
+    <span class='text'>Button</span>
+  </a>
+  <a class="fui-button is-primary">
+    <span class='text'>Button</span>
+  </a>
+<div>
+```
+
 ---
 
 ## 清單
@@ -645,13 +674,73 @@ Panel 可搭配前面的樣式設定修改間距或背景文字顏色。
 | 樣式名稱 | 說明 |
 | :--- | :--- |
 | .no-scrollbar | 小網時牌卡往下排列，不然預設出現左右捲軸 |
+| .is-horizontal | 牌卡最大寬度 290px 超過範圍出現左右捲軸 |
 | .two-card | 一列顯示 2 張牌卡 |
 | .three-card | 一列顯示 3 張牌卡 |
 | .four-card | 一列顯示 4 張牌卡 |
 
 ```html
 <div class='fui-container'>
+  <!--  大網往下排列，小網出現左右捲軸 -->
+  <div class='fui-cards three-card'>
+    <div class="fui-card">
+      <a rel="noopener" class="fui-card-action" href="#">
+        <div class="fui-card-image">
+          <img src="/resources/cbu/exclusive/estore-exclusive-plan-01@2x.jpg">
+        </div>
+        <div class="fui-card-caption">
+          <div class="fui-card-content">
+            <h5 class="fui-card-title">青春無價，就要給你學生價！
+            </h5>
+            <p class="fui-card-description">
+              488上網標到飽，＋100把超夯手機、3C $0帶回家！
+            </p>
+          </div>
+          <div class="fui-card-extra">
+            <div class="fui-button is-arrow mb-0 ">看更多</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="fui-card">
+      ...
+    </div>
+    <div class="fui-card">
+      ...
+    </div>
+  </div>
+
+  <!--  大小網牌卡往下排列 -->
   <div class='fui-cards three-card no-scrollbar'>
+    <div class="fui-card">
+      <a rel="noopener" class="fui-card-action" href="#">
+        <div class="fui-card-image">
+          <img src="/resources/cbu/exclusive/estore-exclusive-plan-01@2x.jpg">
+        </div>
+        <div class="fui-card-caption">
+          <div class="fui-card-content">
+            <h5 class="fui-card-title">青春無價，就要給你學生價！
+            </h5>
+            <p class="fui-card-description">
+              488上網標到飽，＋100把超夯手機、3C $0帶回家！
+            </p>
+          </div>
+          <div class="fui-card-extra">
+            <div class="fui-button is-arrow mb-0 ">看更多</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="fui-card">
+      ...
+    </div>
+    <div class="fui-card">
+      ...
+    </div>
+  </div>
+
+  <!--  大小網超過寬度皆出現左右捲軸 -->
+  <div class='fui-cards three-card is-horizontal'>
     <div class="fui-card">
       <a rel="noopener" class="fui-card-action" href="#">
         <div class="fui-card-image">
