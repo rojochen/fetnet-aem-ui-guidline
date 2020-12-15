@@ -463,6 +463,7 @@ uiGrid-spacing-xs-{space} 間距為 0 ~ 10，以 8px 為單位增加。
 | .underline-link | ![underline-link](./images/underline-link.png) | ![underline-link](./images/underline-link.png) | 加上 ` is-text-black50` 可變成黑色底線 |
 | .hover-underline-link | ![underline-link](./images/hover-underline-link.png) | ![underline-link](./images/hover-underline-link-hover.png) |  |
 | .animation-underline | ![underline-link](./images/animation-underline.png) | ![underline-link](./images/animation-underline-hover.png) | 底線會由左至右動態滑出 |
+| .is-simple-link |  |  | 類似 .fui-button.is-text，移除 margin、padding 的設定 |
 
 **SAMPLE**
 ```html
