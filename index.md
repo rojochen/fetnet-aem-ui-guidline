@@ -66,9 +66,9 @@ uiGrid-spacing-xs-{space} 間距為 0 ~ 10，以 8px 為單位增加。
 </div>
 
 <!--  欄位設定  -->
-欄位總數相加必須在 12 以內。
+<!-- 欄位總數相加必須在 12 以內。 -->
 
-兩欄排列：
+<!-- 兩欄排列： -->
 <div class='MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2'>
   <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-6'>
   </div>
@@ -76,7 +76,7 @@ uiGrid-spacing-xs-{space} 間距為 0 ~ 10，以 8px 為單位增加。
   </div>
 </div>
 
-三欄排列：
+<!-- 三欄排列：-->
 <div class='MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2'>
   <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-md-4'>
   </div>
@@ -86,7 +86,7 @@ uiGrid-spacing-xs-{space} 間距為 0 ~ 10，以 8px 為單位增加。
   </div>
 </div>
 
-小網兩欄、大網四欄排列：
+<!-- 小網兩欄、大網四欄排列：-->
 <div class='MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2'>
   <div class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-3'>
   </div>
